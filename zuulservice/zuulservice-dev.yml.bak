@@ -1,0 +1,19 @@
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 16000
+        timeout:
+          enabled: true
+ribbon:
+  ConnectTimeout: 60000
+  ReadTimeout: 60000
+zuul:
+  debug:
+    request: true
+  routes:
+    baidu:
+      path: /test163/**
+      url: http://www.163.com
